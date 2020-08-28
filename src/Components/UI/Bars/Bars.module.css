@@ -1,0 +1,53 @@
+.Bars,
+.CrossBars {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .Bars {
+    /* display: flex; */
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .Bars > div {
+    margin: 5px 0px;
+    height: 5px;
+    width: 100%;
+    background-color: teal;
+  }
+
+  .CrossBars {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+  }
+
+  .CrossBars > div {
+    background-color: tomato;
+    width: 7px;
+    height: 80%;
+  }
+
+  .CrossBars > div:nth-child(1) {
+    transform: rotate(45deg) translateY(-5px);
+  }
+
+  .CrossBars > div:nth-child(2) {
+    transform: rotate(135deg) translateY(5px);
+  }
+
+  .Hide {
+    display: none;
+  }
+
+  .Show {
+    display: flex;
+  }
+}

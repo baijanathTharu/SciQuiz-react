@@ -1,0 +1,35 @@
+@media (max-width: 500px) {
+  .SideDrawer {
+    min-width: 250px;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+
+  .SideDrawer.Open {
+    transform: translateX(0);
+  }
+
+  .SideDrawer.Close {
+    transform: translateX(-100%);
+  }
+
+  .SideDrawer__title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: teal;
+  }
+}
+
+@media (min-width: 501px) {
+  .SideDrawer {
+    display: none;
+  }
+}

@@ -1,0 +1,146 @@
+.Question {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border: 2px solid #eee;
+  box-shadow: 4px 5px 10px #ccc;
+  margin-bottom: 0;
+}
+
+.Question__animate {
+  transform: rotate(90deg), scale(1.2), translateX(-1000px);
+  transition: transform 1s ease;
+}
+
+.Question__name {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: teal;
+  font-weight: bold;
+}
+
+.Question__options {
+  margin: 1rem 0;
+  display: grid;
+  place-items: center;
+  grid-gap: 1.5rem;
+  width: 80%;
+}
+
+.Question__option {
+  padding: 1rem 2rem;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: rgb(0, 128, 100);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  transform: translateX(0px);
+  z-index: 0;
+  transition: transform 1s ease;
+}
+
+.Question__option:hover {
+  transform: translateX(10px);
+  z-index: 500;
+  transition: transform 1s ease;
+}
+
+.Question__option:nth-child(1):hover {
+  background-color: rgb(5, 139, 5);
+  transform: translateX(-10px);
+}
+
+.Question__option:nth-child(2):hover {
+  background-color: rgb(155, 43, 9);
+}
+
+.Question__option:nth-child(3):hover {
+  background-color: rgb(155, 43, 9);
+  transform: translateX(-10px);
+}
+
+.Question__option:nth-child(4):hover {
+  background-color: rgb(5, 139, 5);
+}
+
+.Question__buttons {
+  margin: 2rem 0 0 0;
+  padding: 1rem;
+  display: flex;
+  /* border: 1px solid white; */
+  justify-content: center;
+  align-items: center;
+}
+
+.Question__button {
+  margin: 0 1rem;
+  padding: 10px;
+  background-color: teal;
+  outline: none;
+  border: 1px solid #ccc;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transform: scale(1);
+  transition: transform 1s ease;
+}
+
+.Question__button:hover {
+  transform: scale(1.2);
+  transition: transform 1s ease;
+}
+
+button:nth-child(1):hover {
+  background-color: tomato;
+}
+
+button:nth-child(2):hover {
+  background-color: rgb(211, 49, 21);
+}
+
+button:nth-child(3):hover {
+  background-color: rgb(124, 27, 216);
+}
+
+@media (max-width: 500px) {
+  .Question__options {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .Question__option {
+    padding: 1rem;
+  }
+  .Question__buttons {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .Question__button {
+    margin: 0 0.5rem;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 501px) {
+  .Question {
+    height: 90%;
+    width: 90%;
+    max-height: 700px;
+    max-width: 1440px;
+  }
+
+  .Question__options {
+    margin: 1rem;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .Question__option {
+    padding: 1rem;
+  }
+}
