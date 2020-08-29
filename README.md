@@ -6,11 +6,11 @@
 
 ## Features
 
-- [ ] 10 Questions for quiz fetched from API
+- [x] 10 Questions for quiz fetched from API
 
 ## Containers
 
-- [ ] QuizLogic: handles all the logic behind the app
+- [x] QuizLogic: handles all the logic behind the app
 
 ## Components
 
@@ -18,9 +18,9 @@
   - [x] Navbar for larger devices
   - [x] SideDrawer Navigation for small devices
   - [x] Back drop or overlay
-- [ ] Quiz
-  - [ ] Questions
-  - [ ] Options
+- [x] Quiz
+  - [x] Questions
+  - [x] Options
   - [ ] Button for navigating questions (use them as UI component)
 - [ ] Implement some kind of routing in the application
 - [ ] About SciQuiz app page

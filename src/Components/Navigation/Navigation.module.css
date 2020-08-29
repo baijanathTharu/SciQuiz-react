@@ -54,13 +54,18 @@
 
 @media (max-width: 500px) {
   .Navigation {
-    display: flex;
     justify-content: space-between;
+    width: 100vw;
+    /* display: flex;
+    height: 80px;
+    width: 100vw;
+    justify-content: center;
     align-items: center;
     color: teal;
-
+    padding: 0 20px 0 10px;
     border: 2px solid #eee;
     box-shadow: 0px 2px 5px #ccc;
+    margin: 0; */
   }
 
   .Navigation h1 {

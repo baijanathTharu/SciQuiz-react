@@ -1,0 +1,40 @@
+.QuizOver {
+  background-color: #eee;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border: 2px solid #eee;
+  box-shadow: 4px 5px 10px #ccc;
+  margin-bottom: 0;
+  min-height: 500px;
+  color: teal;
+}
+
+.QuizOver__summary {
+  font-size: 1.3rem;
+  margin: 1rem 0rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-shadow: 0px 2px 4px #eee;
+}
+
+@media (min-width: 501px) {
+  .QuizOver {
+    height: 905;
+    width: 90%;
+    max-height: 700px;
+    max-width: 1440px;
+  }
+
+  .QuizOver__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .QuizOver__summary {
+    margin: 1rem 1rem;
+  }
+}

@@ -1,7 +1,7 @@
 @media (max-width: 500px) {
   .SideDrawer {
     min-width: 250px;
-    width: 70%;
+    width: 80vw;
     height: 100vh;
     background-color: white;
     position: absolute;

@@ -6,13 +6,18 @@
   align-items: center;
   padding: 1.5rem 1rem;
   border: 2px solid #eee;
-  box-shadow: 4px 5px 10px #ccc;
+  box-shadow: 0px 2px 5px #ccc;
   margin-bottom: 0;
 }
 
-.Question__animate {
-  transform: rotate(90deg), scale(1.2), translateX(-1000px);
-  transition: transform 1s ease;
+.Question__animatepos {
+  transform: rotate(360deg);
+  transition: transform 0.2s ease;
+}
+
+.Question__animateneg {
+  transform: rotate(-360deg);
+  transition: transform 0.2s ease;
 }
 
 .Question__name {
@@ -21,52 +26,6 @@
   font-size: 1.5rem;
   color: teal;
   font-weight: bold;
-}
-
-.Question__options {
-  margin: 1rem 0;
-  display: grid;
-  place-items: center;
-  grid-gap: 1.5rem;
-  width: 80%;
-}
-
-.Question__option {
-  padding: 1rem 2rem;
-  height: 100%;
-  width: 100%;
-  color: white;
-  background-color: rgb(0, 128, 100);
-  cursor: pointer;
-  border-radius: 0.25rem;
-  font-weight: bold;
-  transform: translateX(0px);
-  z-index: 0;
-  transition: transform 1s ease;
-}
-
-.Question__option:hover {
-  transform: translateX(10px);
-  z-index: 500;
-  transition: transform 1s ease;
-}
-
-.Question__option:nth-child(1):hover {
-  background-color: rgb(5, 139, 5);
-  transform: translateX(-10px);
-}
-
-.Question__option:nth-child(2):hover {
-  background-color: rgb(155, 43, 9);
-}
-
-.Question__option:nth-child(3):hover {
-  background-color: rgb(155, 43, 9);
-  transform: translateX(-10px);
-}
-
-.Question__option:nth-child(4):hover {
-  background-color: rgb(5, 139, 5);
 }
 
 .Question__buttons {
@@ -110,17 +69,9 @@ button:nth-child(3):hover {
 }
 
 @media (max-width: 500px) {
-  .Question__options {
-    grid-template-columns: repeat(1, 100%);
-  }
-
-  .Question__option {
-    padding: 1rem;
-  }
   .Question__buttons {
     margin: 0.5rem 0 0 0;
   }
-
   .Question__button {
     margin: 0 0.5rem;
     padding: 10px;
@@ -133,14 +84,5 @@ button:nth-child(3):hover {
     width: 90%;
     max-height: 700px;
     max-width: 1440px;
-  }
-
-  .Question__options {
-    margin: 1rem;
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  .Question__option {
-    padding: 1rem;
   }
 }
