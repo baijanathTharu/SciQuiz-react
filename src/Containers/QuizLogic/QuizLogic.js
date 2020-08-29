@@ -91,6 +91,29 @@ class QuizLogic extends Component {
 
   render() {
     const Error = this.state.Error ? this.state.Error : <h2>Loading...</h2>;
+    let question = Error;
+
+    if (this.state.questions) {
+      let optionsArr = [...this.state.currentQuestion.incorrect_answers];
+      optionsArr.splice(
+        Math.floor(Math.random() * 4),
+        0,
+        this.state.currentQuestion.correct_answer
+      );
+      question = (
+        <Question
+          questionName={this.state.currentQuestion.question
+            .replace(/&#039;/g, "'")
+            .replace(/&quot;/g, '"')
+            .replace(/&rsquo;/g, "'")}
+          options={optionsArr}
+          skipClicked={this.skipHandler}
+          skip={this.state.skipped}
+          optionClicked={(event) => this.optionClickHandler(event)}
+        />
+      );
+    }
+
     return (
       <Fragment>
         {this.state.isQuizOver ? (
@@ -98,22 +121,8 @@ class QuizLogic extends Component {
             correctSummary={this.state.numberOfCorrectAnswers}
             incorrectSummary={this.state.numberOfIncorrectAnswers}
           />
-        ) : this.state.questions ? (
-          <Question
-            questionName={this.state.currentQuestion.question
-              .replace(/&#039;/g, "'")
-              .replace(/&quot;/g, '"')
-              .replace(/&rsquo;/g, "'")}
-            options={[
-              ...this.state.currentQuestion.incorrect_answers,
-              this.state.currentQuestion.correct_answer,
-            ]}
-            skipClicked={this.skipHandler}
-            skip={this.state.skipped}
-            optionClicked={(event) => this.optionClickHandler(event)}
-          />
         ) : (
-          Error
+          question
         )}
       </Fragment>
     );
