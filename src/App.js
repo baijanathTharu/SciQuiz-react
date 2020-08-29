@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+
 import classes from "./App.module.css";
 
 import Navigation from "./Components/Navigation/Navigation";
@@ -27,13 +28,25 @@ class App extends Component {
           {this.state.menuExpanded ? (
             <Backdrop clicked={this.mobileNavHandler} />
           ) : null}
-          <Navigation
-            barsClicked={this.mobileNavHandler}
-            expanded={this.state.menuExpanded}
-          />
-
           <div className={classes.App}>
-            <QuizLogic />
+            <Navigation
+              barsClicked={this.mobileNavHandler}
+              expanded={this.state.menuExpanded}
+            />
+            <Route path="/" exact component={QuizLogic} />
+            <Route
+              path="/about"
+              render={() => {
+                return <h1>Hello about</h1>;
+              }}
+            />
+            <Route
+              path="/explore"
+              exact
+              render={() => {
+                return <h1>Hello Explore</h1>;
+              }}
+            />
           </div>
         </BrowserRouter>
       </Fragment>

@@ -120,6 +120,7 @@ class QuizLogic extends Component {
           <QuizOver
             correctSummary={this.state.numberOfCorrectAnswers}
             incorrectSummary={this.state.numberOfIncorrectAnswers}
+            questions={this.state.questions}
           />
         ) : (
           question

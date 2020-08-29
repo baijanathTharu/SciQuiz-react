@@ -1,0 +1,28 @@
+.Questions {
+  margin: 1rem 0;
+  background-color: #eee;
+  border: 2px solid #eee;
+  box-shadow: 4px 5px 10px #ccc;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.Questions__question {
+  margin: 1rem 0;
+  background-color: #ccc;
+  border: 2px solid #ccc;
+  box-shadow: 4px 5px 10px #eee;
+  padding: 1rem;
+}
+
+.Questions__correct {
+  color: rgb(0, 0, 0);
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 501px) {
+  .Questions {
+    width: 90%;
+    max-width: 1440px;
+  }
+}

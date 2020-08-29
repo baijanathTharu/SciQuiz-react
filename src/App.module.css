@@ -3,12 +3,5 @@
   width: 100vw;
   display: flex;
   flex-flow: column;
-  margin: 0;
-}
-
-@media (min-width: 501px) {
-  .App {
-    justify-content: center;
-    align-items: center;
-  }
+  align-items: center;
 }
