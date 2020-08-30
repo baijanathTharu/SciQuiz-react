@@ -1,0 +1,14 @@
+.Explore {
+  background-color: #eee;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border: 2px solid #eee;
+  box-shadow: 4px 5px 10px #ccc;
+  margin-bottom: 0;
+  color: teal;
+  height: auto;
+  width: 100vw;
+}

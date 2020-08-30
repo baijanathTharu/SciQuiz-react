@@ -6,6 +6,7 @@ import classes from "./App.module.css";
 import Navigation from "./Components/Navigation/Navigation";
 import QuizLogic from "./Containers/QuizLogic/QuizLogic";
 import Backdrop from "./Components/UI/Backdrop/Backdrop";
+import ExploreLogic from "./Containers/ExploreLogic/ExploreLogic";
 
 class App extends Component {
   state = {
@@ -40,13 +41,7 @@ class App extends Component {
                 return <h1>Hello about</h1>;
               }}
             />
-            <Route
-              path="/explore"
-              exact
-              render={() => {
-                return <h1>Hello Explore</h1>;
-              }}
-            />
+            <Route path="/explore" exact component={ExploreLogic} />
           </div>
         </BrowserRouter>
       </Fragment>

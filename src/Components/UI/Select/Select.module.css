@@ -1,0 +1,14 @@
+.Select {
+  background-color: #ccc;
+  color: teal;
+  padding: 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border: 1px solid #eee;
+  margin: 0.5rem 1rem;
+}
+
+label {
+  color: teal;
+  font-weight: bold;
+}
