@@ -1,16 +1,14 @@
 # [SciQuiz](https://heuristic-villani-b8e0fb.netlify.app/)
 
-## Working on
-
-- [x] Setting up the project
-
 ## Features
 
 - [x] 10 Questions for quiz fetched from API
+- [x] Section for exploring where user can learn more.
 
 ## Containers
 
-- [x] QuizLogic: handles all the logic behind the app
+- [x] QuizLogic: handles all the logic behind the quiz section.
+- [x] ExploreLogic: handles all the logic behind the explore section of the app.
 
 ## Components
 
@@ -21,9 +19,8 @@
 - [x] Quiz
   - [x] Questions
   - [x] Options
-  - [ ] Button for navigating questions (use them as UI component)
-- [ ] Implement some kind of routing in the application
-- [ ] About SciQuiz app page
+- [x] Implement some kind of routing in the application
+- [x] About SciQuiz app page
 
 ---
 

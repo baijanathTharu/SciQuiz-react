@@ -7,6 +7,7 @@ import Navigation from "./Components/Navigation/Navigation";
 import QuizLogic from "./Containers/QuizLogic/QuizLogic";
 import Backdrop from "./Components/UI/Backdrop/Backdrop";
 import ExploreLogic from "./Containers/ExploreLogic/ExploreLogic";
+import About from "./Components/About/About";
 
 class App extends Component {
   state = {
@@ -36,12 +37,7 @@ class App extends Component {
               linkClicked={this.mobileNavHandler}
             />
             <Route path="/" exact component={QuizLogic} />
-            <Route
-              path="/about"
-              render={() => {
-                return <h1>Hello about</h1>;
-              }}
-            />
+            <Route path="/about" exact component={About} />
             <Route path="/explore" exact component={ExploreLogic} />
           </div>
         </BrowserRouter>

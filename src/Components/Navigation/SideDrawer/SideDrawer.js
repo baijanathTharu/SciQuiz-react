@@ -13,7 +13,11 @@ const SideDrawer = (props) => {
       }
     >
       <div className={classes.SideDrawer__title}>
-        <h2>SciQuiz</h2>
+        <h2>
+          <Link to="/" onClick={props.hideSideDrawer}>
+            SciQuiz
+          </Link>
+        </h2>
         <ul className={classes.SideDrawer__items}>
           <li className={classes.SideDrawer__item}>
             <Link to="/about" onClick={props.hideSideDrawer}>

@@ -1,0 +1,20 @@
+.About {
+  margin: 1rem 0;
+  color: teal;
+  padding: 1rem;
+}
+
+.About h1 {
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+}
+
+.About p {
+  padding: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.About p a {
+  color: orangered;
+  cursor: pointer;
+}
