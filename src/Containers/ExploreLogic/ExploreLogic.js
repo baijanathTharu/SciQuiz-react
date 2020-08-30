@@ -84,7 +84,9 @@ class ExploreLogic extends Component {
   render() {
     return (
       <Fragment>
-        {this.state.loading ? <h2>Loading...</h2> : null}
+        {this.state.loading ? (
+          <h2 style={{ margin: "10px" }}>Loading...</h2>
+        ) : null}
         {this.state.questions ? (
           <Explore
             questionsArr={this.state.questions}
@@ -92,7 +94,7 @@ class ExploreLogic extends Component {
             changed={(event) => this.userInputHandler(event)}
           />
         ) : (
-          <h2>Loading...</h2>
+          <h2 style={{ margin: "10px" }}>Loading...</h2>
         )}
       </Fragment>
     );

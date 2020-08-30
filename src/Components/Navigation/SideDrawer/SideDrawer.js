@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import classes from "./SideDrawer.module.css";
 
 const SideDrawer = (props) => {
@@ -12,6 +14,18 @@ const SideDrawer = (props) => {
     >
       <div className={classes.SideDrawer__title}>
         <h2>SciQuiz</h2>
+        <ul className={classes.SideDrawer__items}>
+          <li className={classes.SideDrawer__item}>
+            <Link to="/about" onClick={props.hideSideDrawer}>
+              About
+            </Link>{" "}
+          </li>
+          <li className={classes.SideDrawer__item}>
+            <Link to="/explore" onClick={props.hideSideDrawer}>
+              Explore
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );

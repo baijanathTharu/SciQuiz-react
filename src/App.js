@@ -33,6 +33,7 @@ class App extends Component {
             <Navigation
               barsClicked={this.mobileNavHandler}
               expanded={this.state.menuExpanded}
+              linkClicked={this.mobileNavHandler}
             />
             <Route path="/" exact component={QuizLogic} />
             <Route

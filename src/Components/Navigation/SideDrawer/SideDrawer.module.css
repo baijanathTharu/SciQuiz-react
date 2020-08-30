@@ -26,6 +26,16 @@
     margin: 1rem 0;
     color: teal;
   }
+
+  .SideDrawer__items {
+    margin: 1rem 0;
+  }
+
+  .SideDrawer__item {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
 
 @media (min-width: 501px) {

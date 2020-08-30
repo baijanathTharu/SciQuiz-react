@@ -9,7 +9,7 @@ import classes from "./Navigation.module.css";
 const Navigation = (props) => {
   return (
     <div className={classes.Navigation}>
-      <SideDrawer open={props.expanded} />
+      <SideDrawer open={props.expanded} hideSideDrawer={props.linkClicked} />
       <h1>
         <a href="/">SciQuiz</a>
       </h1>
