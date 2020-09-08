@@ -1,4 +1,4 @@
-# [SciQuiz](https://heuristic-villani-b8e0fb.netlify.app/)
+# [SciQuiz](https://sciquiz.netlify.app/)
 
 ## Features
 
